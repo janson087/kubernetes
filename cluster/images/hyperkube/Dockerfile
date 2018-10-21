@@ -70,6 +70,7 @@ COPY cni-conf /etc/cni/net.d
 # TODO: replace manual symlink creation with --make-symlink command once
 # cross-building with qemu supports go binaries. See #28702
 # RUN /hyperkube --make-symlinks
+# command
 RUN ln -s /hyperkube /apiserver \
  && ln -s /hyperkube /controller-manager \
  && ln -s /hyperkube /federation-apiserver \
